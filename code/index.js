@@ -11,7 +11,8 @@ const data = {name: "Chris"};
 const rendered = mustache.render(template, data);
 
 const CLIENT_ID = "982296921783-eqg8jqgjsvvm8ph1bg69jbnjk78vle7g.apps.googleusercontent.com";
-const REDIRECT_URI = "http://jiminychris.com/lorem";
+const REDIRECT_URI = location.hostname === "localhost" ? "http://localhost:8000" : "http://jiminychris.com/lorem";
+
 var fragmentString = location.hash.substring(1);
 
 const params = new URLSearchParams(fragmentString);
