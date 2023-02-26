@@ -1,13 +1,17 @@
 <html>
   <head>
-    <title>Lorem Ipsum</title>
+    <title>Lorem</title>
+    <link href="index.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Lorem Ipsum</h1>
     <iframe id="frame">
     </iframe>
-    <input type="button" value="Export PDF" id="export" />
+    <input type="button" value="Choose template" id="template-picker" class="picker" disabled />
+    <!--<input type="button" value="Choose spreadsheet" id="spreadsheet-picker" class="picker" disabled />-->
+    <input type="button" value="Export PDF" id="export" disabled />
     <script type="text/javascript" src="code/jspdf.umd.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+    <script type="text/javascript" src="https://accounts.google.com/gsi/client"></script>
     <script type="module" src="code/index.js"></script>
   </body>
 </html>
