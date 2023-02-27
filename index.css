@@ -1,3 +1,9 @@
+[hidden] {
+    display:none !important;
+}
+#main {
+    display: flex;
+}
 #frame {
     width: 8.5in;
     height: 11in;

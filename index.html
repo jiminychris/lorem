@@ -4,14 +4,25 @@
     <link href="index.css" rel="stylesheet" />
   </head>
   <body>
-    <iframe id="frame">
-    </iframe>
-    <input type="button" value="Choose template" id="template-picker" class="picker" disabled />
-    <!--<input type="button" value="Choose spreadsheet" id="spreadsheet-picker" class="picker" disabled />-->
-    <input type="button" value="Export PDF" id="export" disabled />
-    <script type="text/javascript" src="code/jspdf.umd.js"></script>
-    <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
-    <script type="text/javascript" src="https://accounts.google.com/gsi/client"></script>
+    <div id="splash">
+      <input type="button" value="Login" id="login" />
+    </div>
+    <div id="main" hidden>
+      <iframe id="frame">
+      </iframe>
+      <div>
+        <input type="button" value="Choose template" id="template-picker" class="picker" disabled hidden />
+        <input type="button" value="Choose spreadsheet" id="spreadsheet-picker" class="picker" disabled />
+        <input type="button" value="Export PDF" id="export" class="render" disabled />
+        <input type="button" value="Reload" id="reload" class="render" disabled />
+        <input type="button" value="Save PDF" id="save" class="render" disabled hidden />
+        <ul id="history">
+        </ul>
+      </div>
+      <script type="text/javascript" src="code/jspdf.umd.js"></script>
+      <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+      <script type="text/javascript" src="https://accounts.google.com/gsi/client"></script>
+    </div>
     <script type="module" src="code/index.js"></script>
   </body>
 </html>
