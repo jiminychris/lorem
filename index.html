@@ -5,24 +5,35 @@
   </head>
   <body>
     <div id="splash">
-      <input type="button" value="Login" id="login" />
+      <div>
+        <label for="preparer">Preparer name</label>
+        <input id="preparer" />
+      </div>
+      <input type="button" value="Login" id="login" disabled />
     </div>
     <div id="main" hidden>
       <iframe id="frame">
       </iframe>
       <div>
         <input type="button" value="Choose template" id="template-picker" class="picker" disabled hidden />
-        <input type="button" value="Choose spreadsheet" id="spreadsheet-picker" class="picker" disabled />
+        <input type="button" value="Choose Data" id="choose-data" class="picker" disabled />
+        <input type="button" value="Choose Matrix Connection Application" id="choose-matrix-connection-application" class="picker" disabled />
+        <input type="button" value="Choose My Health Story" id="choose-my-health-story" class="picker" disabled />
         <input type="button" value="Export PDF" id="export" class="render" disabled />
         <input type="button" value="Reload" id="reload" class="render" disabled />
+        <input type="button" value="Toggle template" id="toggle" class="render" disabled />
         <input type="button" value="Save PDF" id="save" class="render" disabled hidden />
+        <textarea id="raw-data-display" rows=30 cols=80 readonly></textarea>
+        <textarea id="data-display" rows=30 cols=80 readonly></textarea>
         <ul id="history">
         </ul>
       </div>
-      <script type="text/javascript" src="code/jspdf.umd.js"></script>
-      <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
-      <script type="text/javascript" src="https://accounts.google.com/gsi/client"></script>
     </div>
+    <script type="text/javascript" src="code/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="code/jspdf.umd.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+    <script type="text/javascript" src="https://accounts.google.com/gsi/client"></script>
+    <script type="text/javascript" src="code/wellnessMatrixDataTransform.js"></script>
     <script type="module" src="code/index.js"></script>
   </body>
 </html>

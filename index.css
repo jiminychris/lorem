@@ -5,8 +5,8 @@
     display: flex;
 }
 #frame {
-    width: 8.5in;
-    height: 11in;
+    min-width: 8.5in;
+    min-height: 11in;
 }
 input {
     vertical-align: top;
